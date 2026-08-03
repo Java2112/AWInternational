@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/bg-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+/* Logo positioned at the top left */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 320px; /* Made the logo bigger to match proportions */
+    max-width: 30vw;
+    object-fit: contain;
+    z-index: 10;
+}
+
+/* Left Section: Text Content */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text horizontally in the left block */
+    height: 100%;
+    max-width: 55%;
+    padding-top: 50px; /* Offset to account for the logo above */
+}
+
+.text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-name {
+    color: #2b5c7d; /* Deep blue from presentation */
+    font-size: clamp(3rem, 5.5vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: #000000;
+    font-size: clamp(1.2rem, 2.3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    color: #a38244; /* Golden/Brownish color from presentation */
+    font-size: clamp(1.2rem, 2.3vw, 2.5rem);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Right Section: Product */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 45%;
+}
+
+.product-img {
+    width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 120px;
+    }
+    
+    .logo {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+    }
+    
+    .hero-left {
+        max-width: 100%;
+        padding-top: 0;
+    }
+    
+    .hero-right {
+        max-width: 80%;
+        margin-top: 2rem;
+    }
+}
